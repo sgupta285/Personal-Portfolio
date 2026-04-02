@@ -145,6 +145,6 @@ Most of the site content is driven by source data rather than being hard-coded p
 
 The site is deployed on Vercel:
 
-[https://personal-website-srijan.vercel.app/](https://personal-website-srijan.vercel.app/)
+(https://personal-website-srijan.vercel.app/)
 
 When the repo is linked correctly, pushing to the production branch or running `vercel --prod` updates the live site.
