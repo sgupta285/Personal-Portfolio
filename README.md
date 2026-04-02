@@ -141,21 +141,6 @@ Most of the site content is driven by source data rather than being hard-coded p
 - Data/content model: local TypeScript data modules
 - Deployment: Vercel
 
-## Local Development
-
-Run the site locally with:
-
-```bash
-npm install
-npm run dev
-```
-
-Build a production bundle with:
-
-```bash
-npm run build
-```
-
 ## Updating Content
 
 If I want to update the portfolio later, these are the main places to change:
