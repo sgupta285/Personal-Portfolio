@@ -37,7 +37,8 @@ export function ContactPage() {
                 whileHover={{ x: 8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
+                aria-label={`Send an email to ${contactInfo.email}`}
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)] focus-visible:border-[var(--accent)]"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -90,7 +91,8 @@ export function ContactPage() {
                 whileHover={{ x: 8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
+                aria-label={`Call ${contactInfo.phone}`}
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)] focus-visible:border-[var(--accent)]"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -144,7 +146,8 @@ export function ContactPage() {
                 href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
+                aria-label="Open Srijan Gupta's LinkedIn profile"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)] focus-visible:border-[var(--accent)]"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -198,7 +201,8 @@ export function ContactPage() {
                 href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
+                aria-label="Open Srijan Gupta's GitHub profile"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)] focus-visible:border-[var(--accent)]"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
