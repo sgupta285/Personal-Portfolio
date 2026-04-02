@@ -183,7 +183,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   >
                     <motion.button
                       onClick={() => onNavigate('projects')}
-                      className="group relative px-8 py-4 rounded-xl overflow-hidden"
+                      type="button"
+                      className="group relative px-8 py-4 rounded-xl overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
                       style={{
                         background: 'var(--gradient-accent)',
                         color: 'white',
@@ -205,7 +206,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
                     <motion.button
                       onClick={() => onNavigate('resume')}
-                      className="group px-8 py-4 rounded-xl relative overflow-hidden"
+                      type="button"
+                      className="group px-8 py-4 rounded-xl relative overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
                       style={{
                         backgroundColor: 'var(--surface-elevated)',
                         color: 'var(--ink-primary)',
@@ -223,7 +225,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
                     <motion.button
                       onClick={() => onNavigate('contact')}
-                      className="group px-8 py-4 rounded-xl"
+                      type="button"
+                      className="group px-8 py-4 rounded-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
                       style={{
                         backgroundColor: 'transparent',
                         color: 'var(--accent)',
@@ -296,7 +299,8 @@ function FeatureCard({ icon, title, onClick, featured, delay = 0 }: FeatureCardP
     <motion.button
       ref={ref}
       onClick={onClick}
-      className="group relative text-left p-8 rounded-2xl overflow-hidden"
+      type="button"
+      className="group relative text-left p-8 rounded-2xl overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
       style={{
         backgroundColor: 'var(--surface-elevated)',
         border: '1px solid var(--muted)',
