@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal portfolio website.
 
-Live site: [personal-website-srijan.vercel.app](https://personal-website-srijan.vercel.app/)
+Live site: (https://personal-website-srijan.vercel.app/)
 
 ## About Me
 
