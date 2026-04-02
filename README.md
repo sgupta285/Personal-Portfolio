@@ -141,16 +141,6 @@ Most of the site content is driven by source data rather than being hard-coded p
 - Data/content model: local TypeScript data modules
 - Deployment: Vercel
 
-## Updating Content
-
-If I want to update the portfolio later, these are the main places to change:
-
-- Add or edit project entries in `src/data/projects.ts`
-- Update bio copy in `src/pages/HomePage.tsx` and `src/pages/AboutPage.tsx`
-- Update experience in `src/data/experience.ts`
-- Update contact links in `src/data/contact.ts`
-- Update browser-tab branding in `public/sg-favicon.svg`
-
 ## Deployment
 
 The site is deployed on Vercel:
