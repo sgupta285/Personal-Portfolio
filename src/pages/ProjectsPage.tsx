@@ -74,6 +74,9 @@ export function ProjectsPage() {
               <motion.button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
+                type="button"
+                aria-label={`Filter projects by ${filter}`}
+                aria-pressed={selectedFilter === filter}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
