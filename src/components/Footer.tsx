@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { contactInfo } from '../data/contact';
 
 export function Footer() {
@@ -13,12 +13,12 @@ export function Footer() {
       }}
     >
       <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           <div style={{ color: 'var(--ink-secondary)' }}>
             <p>© {currentYear} Srijan Gupta. All rights reserved.</p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <a
               href={`mailto:${contactInfo.email}`}
               className="transition-colors hover:text-[var(--accent)]"
@@ -36,6 +36,16 @@ export function Footer() {
               title="LinkedIn"
             >
               <Linkedin size={20} />
+            </a>
+            <a
+              href={contactInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-[var(--accent)]"
+              style={{ color: 'var(--ink-secondary)' }}
+              title="GitHub"
+            >
+              <Github size={20} />
             </a>
           </div>
         </div>

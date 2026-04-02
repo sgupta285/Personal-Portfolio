@@ -157,7 +157,7 @@ Single Page Application (SPA)
 ## 💼 Content Highlights
 
 ### Professional Bio
-> "Software engineer and data scientist building production-grade ML systems, real-time platforms, and quantitative tools. I specialize in end-to-end development—from infrastructure optimization and API design to data pipelines and user-facing products."
+> "Software engineer and data scientist building production-grade ML systems, real-time platforms, and quantitative tools. I specialize in end-to-end development, from infrastructure optimization and API design to data pipelines and user-facing products."
 
 ### Featured Projects
 1. **ClearClause** - Legal RAG search system (87% precision@10, 93% latency reduction)

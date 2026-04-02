@@ -9,13 +9,26 @@ export function ExperienceTimeline({ experiences }: ExperienceTimelineProps) {
   return (
     <div className="space-y-12">
       {experiences.map((exp, index) => (
-        <ExperienceNode key={exp.id} experience={exp} index={index} />
+        <ExperienceNode
+          key={exp.id}
+          experience={exp}
+          index={index}
+          isLast={index === experiences.length - 1}
+        />
       ))}
     </div>
   );
 }
 
-function ExperienceNode({ experience, index }: { experience: Experience; index: number }) {
+function ExperienceNode({
+  experience,
+  index,
+  isLast
+}: {
+  experience: Experience;
+  index: number;
+  isLast: boolean;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -39,7 +52,7 @@ function ExperienceNode({ experience, index }: { experience: Experience; index: 
   return (
     <div
       ref={ref}
-      className={`flex gap-6 transition-all duration-700 ${
+      className={`flex gap-4 sm:gap-6 transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -53,7 +66,7 @@ function ExperienceNode({ experience, index }: { experience: Experience; index: 
             boxShadow: '0 0 0 4px rgba(37, 99, 235, 0.1)'
           }}
         />
-        {index < 3 && (
+        {!isLast && (
           <div
             className="w-0.5 h-full mt-2"
             style={{ backgroundColor: 'var(--muted)' }}
@@ -64,7 +77,7 @@ function ExperienceNode({ experience, index }: { experience: Experience; index: 
       {/* Content */}
       <div className="flex-1 pb-8">
         <div
-          className="p-6 rounded-lg"
+          className="p-5 sm:p-6 rounded-lg"
           style={{
             backgroundColor: 'white',
             boxShadow: 'var(--shadow-sm)',

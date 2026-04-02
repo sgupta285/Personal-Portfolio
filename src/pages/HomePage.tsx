@@ -15,7 +15,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-  const bio = "Software engineer and data scientist building production-grade ML systems, real-time platforms, and quantitative tools. I specialize in end-to-end development—from infrastructure optimization and API design to data pipelines and user-facing products. My work spans scalable backends (Node.js, Python, FastAPI), AI/ML systems (NLP, RAG, fraud detection), quantitative finance (algorithmic trading, options pricing), and product analytics. I focus on measurable impact: reduced latency, higher precision, better reliability.";
+  const bio = "Software engineer and data scientist building production-grade ML systems, scalable backend platforms, and quantitative tools. I specialize in end-to-end development across APIs, distributed systems, data pipelines, and user-facing products. My experience spans Python, Node.js, FastAPI, React, PostgreSQL, Redis, Docker, and cloud infrastructure, alongside NLP, RAG, fraud detection, forecasting, and product analytics. I focus on measurable outcomes: lower latency, stronger reliability, and better model performance.";
 
   return (
     <AnimatedPage>
@@ -163,7 +163,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       style={{
                         fontSize: 'var(--text-body)',
                         lineHeight: '1.8',
-                        color: 'var(--ink-secondary)'
+                        color: 'var(--ink-secondary)',
+                        textAlign: 'justify'
                       }}
                     >
                       {bio}

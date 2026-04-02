@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Linkedin, Phone } from 'lucide-react';
+import { Mail, Linkedin, Phone, Github } from 'lucide-react';
 import { contactInfo } from '../data/contact';
 import { AnimatedPage } from '../components/AnimatedPage';
 
@@ -37,7 +37,7 @@ export function ContactPage() {
                 whileHover={{ x: 8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-center gap-4 p-6 rounded-2xl relative group overflow-hidden"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -53,12 +53,12 @@ export function ContactPage() {
                   }}
                 />
                 <div
-                  className="relative z-10 flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl"
+                  className="relative z-10 flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl"
                   style={{ background: 'var(--gradient-accent)' }}
                 >
-                  <Mail size={24} style={{ color: 'white' }} />
+                  <Mail size={28} style={{ color: 'white' }} />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 min-w-0">
                   <p
                     className="font-semibold"
                     style={{
@@ -70,6 +70,7 @@ export function ContactPage() {
                     Email
                   </p>
                   <p
+                    className="break-all"
                     style={{
                       fontSize: 'var(--text-small)',
                       lineHeight: 'var(--text-small-lh)',
@@ -89,7 +90,7 @@ export function ContactPage() {
                 whileHover={{ x: 8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                className="flex items-center gap-4 p-6 rounded-2xl relative group overflow-hidden"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -105,12 +106,12 @@ export function ContactPage() {
                   }}
                 />
                 <div
-                  className="relative z-10 flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl"
+                  className="relative z-10 flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl"
                   style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)' }}
                 >
-                  <Phone size={24} style={{ color: 'white' }} />
+                  <Phone size={28} style={{ color: 'white' }} />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 min-w-0">
                   <p
                     className="font-semibold"
                     style={{
@@ -143,7 +144,7 @@ export function ContactPage() {
                 href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-6 rounded-2xl relative group overflow-hidden"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
                 style={{
                   backgroundColor: 'var(--surface-elevated)',
                   boxShadow: 'var(--shadow-sm)',
@@ -159,12 +160,12 @@ export function ContactPage() {
                   }}
                 />
                 <div
-                  className="relative z-10 flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl"
+                  className="relative z-10 flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl"
                   style={{ background: 'linear-gradient(135deg, #0077B5 0%, #005885 100%)' }}
                 >
-                  <Linkedin size={24} style={{ color: 'white' }} />
+                  <Linkedin size={28} style={{ color: 'white' }} />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 min-w-0">
                   <p
                     className="font-semibold"
                     style={{
@@ -183,6 +184,60 @@ export function ContactPage() {
                     }}
                   >
                     Connect with me
+                  </p>
+                </div>
+              </motion.a>
+
+              {/* GitHub */}
+              <motion.a
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                whileHover={{ x: 8, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href={contactInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start sm:items-center gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl relative group overflow-hidden"
+                style={{
+                  backgroundColor: 'var(--surface-elevated)',
+                  boxShadow: 'var(--shadow-sm)',
+                  border: '1px solid var(--muted)',
+                  display: 'flex'
+                }}
+              >
+                <motion.div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{
+                    background: 'linear-gradient(135deg, #24292e 0%, #111827 100%)',
+                    opacity: 0.05
+                  }}
+                />
+                <div
+                  className="relative z-10 flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-2xl"
+                  style={{ background: 'linear-gradient(135deg, #24292e 0%, #111827 100%)' }}
+                >
+                  <Github size={28} style={{ color: 'white' }} />
+                </div>
+                <div className="relative z-10 min-w-0">
+                  <p
+                    className="font-semibold"
+                    style={{
+                      fontSize: 'var(--text-body)',
+                      lineHeight: 'var(--text-body-lh)',
+                      color: 'var(--ink-primary)'
+                    }}
+                  >
+                    GitHub
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 'var(--text-small)',
+                      lineHeight: 'var(--text-small-lh)',
+                      color: 'var(--ink-secondary)'
+                    }}
+                  >
+                    View my repositories
                   </p>
                 </div>
               </motion.a>

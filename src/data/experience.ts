@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     bullets: [
       'Built and maintained the MIDUS research website (midus.wisc.edu) on WordPress, delivering a modern accessible UI and shipping custom PHP + SQL modules to streamline publications and data access.',
       'Modernized backend/research infrastructure for 200+ researchers, improving performance by 35% via REST API redesign, PostgreSQL optimization, and Redis caching.',
-      'Automated recurring updates and data operations with Python tooling, including a BeautifulSoup-based scraper to keep the national holiday calendar current—eliminating manual entry and reducing system/query load.',
+      'Automated recurring updates and data operations with Python tooling, including a BeautifulSoup-based scraper to keep the national holiday calendar current, eliminating manual entry and reducing system/query load.',
       'Implemented production guardrails (validation + auth/security controls like OAuth2/RBAC/JWT, rate limiting, audit-friendly workflows) to keep data pipelines reliable and maintainable.'
     ]
   },

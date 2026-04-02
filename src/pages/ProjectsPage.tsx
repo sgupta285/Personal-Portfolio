@@ -1,30 +1,52 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
 import { projects, type Project } from '../data/projects';
 import { ProjectCard } from '../components/ProjectCard';
 import { ProjectModal } from '../components/ProjectModal';
 import { AnimatedPage } from '../components/AnimatedPage';
 
-type FilterType = 'All' | 'Full-Stack & Real-Time' | 'Mobile' | 'ML & AI Systems' | 'Quantitative Finance' | 'Product Analytics' | 'Data Science' | 'Econometrics';
+type FilterType = 'All' | 'Full-Stack & Real-Time' | 'Mobile' | 'ML & AI Systems' | 'Quantitative Finance' | 'Product Analytics' | 'Data Science' | 'Econometrics' | 'Cloud & Infrastructure';
+const ITEMS_PER_PAGE = 10;
 
 export function ProjectsPage() {
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('All');
+  const [currentPage, setCurrentPage] = useState(1);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filters: FilterType[] = ['All', 'Full-Stack & Real-Time', 'Mobile', 'ML & AI Systems', 'Quantitative Finance', 'Product Analytics', 'Data Science', 'Econometrics'];
+  const filters: FilterType[] = ['All', 'Full-Stack & Real-Time', 'Mobile', 'ML & AI Systems', 'Quantitative Finance', 'Product Analytics', 'Data Science', 'Econometrics', 'Cloud & Infrastructure'];
 
   const filteredProjects = useMemo(() => {
     if (selectedFilter === 'All') return projects;
     return projects.filter(p => p.category === selectedFilter);
   }, [selectedFilter]);
 
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / ITEMS_PER_PAGE));
+  const paginatedProjects = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProjects.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [currentPage, filteredProjects]);
+
+  const handleFilterChange = (filter: FilterType) => {
+    setSelectedFilter(filter);
+    setCurrentPage(1);
+  };
+
+  const handlePreviousPage = () => {
+    setCurrentPage((page) => Math.max(1, page - 1));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((page) => Math.min(totalPages, page + 1));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <AnimatedPage>
       <div className="min-h-screen pt-24 pb-20">
         <div className="container">
           {/* Header */}
-          <motion.div 
-            className="max-w-4xl mx-auto mb-12 text-center"
+          <motion.div
+            className="max-w-4xl mx-auto mb-16 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -42,8 +64,8 @@ export function ProjectsPage() {
           </motion.div>
 
           {/* Filters */}
-          <motion.div 
-            className="flex flex-wrap items-center justify-center gap-3 mb-12"
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 mb-24 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -51,13 +73,13 @@ export function ProjectsPage() {
             {filters.map((filter, index) => (
               <motion.button
                 key={filter}
-                onClick={() => setSelectedFilter(filter)}
+                onClick={() => handleFilterChange(filter)}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative px-6 py-3 rounded-full transition-all"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="relative px-4 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all"
                 style={{
                   backgroundColor: selectedFilter === filter ? 'transparent' : 'white',
                   color: selectedFilter === filter ? 'white' : 'var(--ink-primary)',
@@ -80,16 +102,18 @@ export function ProjectsPage() {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto"
+          <motion.div
+            className="grid md:grid-cols-2 gap-x-10 gap-y-14 lg:gap-x-12 lg:gap-y-16 max-w-6xl mx-auto mt-4"
+            style={{ alignItems: 'stretch' }}
             layout
           >
-            {filteredProjects.map((project, index) => (
+            {paginatedProjects.map((project, index) => (
               <motion.div
                 key={project.id}
+                className="h-full"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.28) }}
                 layout
               >
                 <ProjectCard
@@ -100,20 +124,69 @@ export function ProjectsPage() {
             ))}
           </motion.div>
 
-        {filteredProjects.length === 0 && (
-          <div className="text-center py-20">
-            <p
-              style={{
-                fontSize: 'var(--text-body)',
-                lineHeight: 'var(--text-body-lh)',
-                color: 'var(--ink-secondary)'
-              }}
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-20">
+              <p
+                style={{
+                  fontSize: 'var(--text-body)',
+                  lineHeight: 'var(--text-body-lh)',
+                  color: 'var(--ink-secondary)'
+                }}
+              >
+                No projects found in this category
+              </p>
+            </div>
+          )}
+
+          {filteredProjects.length > ITEMS_PER_PAGE && (
+            <motion.div
+              className="flex items-center justify-center gap-4 mt-24"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
-              No projects found in this category
-            </p>
-          </div>
-        )}
-      </div>
+              <button
+                onClick={handlePreviousPage}
+                disabled={currentPage === 1}
+                className="px-5 py-3 rounded-xl transition-all disabled:cursor-not-allowed disabled:opacity-50"
+                style={{
+                  backgroundColor: 'var(--surface-elevated)',
+                  border: '1px solid var(--muted)',
+                  color: 'var(--ink-primary)',
+                  boxShadow: 'var(--shadow-sm)'
+                }}
+              >
+                Previous
+              </button>
+
+              <div
+                className="px-4 py-3 rounded-xl"
+                style={{
+                  backgroundColor: 'var(--surface-elevated)',
+                  border: '1px solid var(--muted)',
+                  color: 'var(--ink-secondary)',
+                  boxShadow: 'var(--shadow-sm)'
+                }}
+              >
+                Page {currentPage} of {totalPages}
+              </div>
+
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className="px-5 py-3 rounded-xl transition-all disabled:cursor-not-allowed disabled:opacity-50"
+                style={{
+                  backgroundColor: 'var(--surface-elevated)',
+                  border: '1px solid var(--muted)',
+                  color: 'var(--ink-primary)',
+                  boxShadow: 'var(--shadow-sm)'
+                }}
+              >
+                Next
+              </button>
+            </motion.div>
+          )}
+        </div>
 
         {/* Project Modal */}
         {selectedProject && (

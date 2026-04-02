@@ -12,12 +12,13 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
     <motion.button
       onClick={onClick}
-      className="group relative w-full text-left p-6 rounded-2xl overflow-hidden"
+      className="group relative flex h-full w-full flex-col text-left p-6 sm:p-7 lg:p-8 rounded-2xl overflow-hidden"
       style={{
         backgroundColor: 'var(--surface-elevated)',
-        border: '1px solid var(--muted)'
+        border: '1px solid var(--muted)',
+        minHeight: '260px'
       }}
-      whileHover={{ y: -8, scale: 1.02 }}
+      whileHover={{ y: -4 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
@@ -42,11 +43,11 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
         transition={{ duration: 0.3 }}
       />
 
-      <div className="relative z-10">
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <div>
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="min-w-0">
             <h3
-              className="font-semibold mb-1 group-hover:text-[var(--accent)] transition-colors"
+              className="font-semibold mb-1 break-words group-hover:text-[var(--accent)] transition-colors"
               style={{
                 fontSize: 'var(--text-h3)',
                 lineHeight: 'var(--text-h3-lh)',
@@ -88,7 +89,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </Badge>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-auto flex flex-wrap gap-2">
           {project.stack.slice(0, 4).map((tech) => (
             <motion.span
               key={tech}
@@ -100,8 +101,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
                 color: 'var(--ink-secondary)',
                 border: '1px solid var(--muted)'
               }}
-              whileHover={{ 
-                scale: 1.1,
+              whileHover={{
                 backgroundColor: 'var(--accent-glow)',
                 color: 'var(--accent)'
               }}
