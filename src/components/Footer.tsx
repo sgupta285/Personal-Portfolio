@@ -21,7 +21,8 @@ export function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a
               href={`mailto:${contactInfo.email}`}
-              className="transition-colors hover:text-[var(--accent)]"
+              aria-label={`Send an email to ${contactInfo.email}`}
+              className="rounded-full p-2 transition-colors hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
               style={{ color: 'var(--ink-secondary)' }}
               title="Email"
             >
@@ -31,7 +32,8 @@ export function Footer() {
               href={contactInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[var(--accent)]"
+              aria-label="Open Srijan Gupta's LinkedIn profile"
+              className="rounded-full p-2 transition-colors hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
               style={{ color: 'var(--ink-secondary)' }}
               title="LinkedIn"
             >
@@ -41,7 +43,8 @@ export function Footer() {
               href={contactInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[var(--accent)]"
+              aria-label="Open Srijan Gupta's GitHub profile"
+              className="rounded-full p-2 transition-colors hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
               style={{ color: 'var(--ink-secondary)' }}
               title="GitHub"
             >
