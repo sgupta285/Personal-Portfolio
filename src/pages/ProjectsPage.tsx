@@ -65,7 +65,7 @@ export function ProjectsPage() {
 
           {/* Filters */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 mb-24 max-w-5xl mx-auto"
+            className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-6 gap-y-7 mb-24 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
