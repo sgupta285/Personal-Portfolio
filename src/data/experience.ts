@@ -27,6 +27,21 @@ export const experiences: Experience[] = [
     ]
   },
   {
+    id: 'uw-madison',
+    company: 'Institute on Aging (UW–Madison)',
+    role: 'Student IT Support Specialist',
+    period: 'February 2024 - January 2026',
+    startDate: '2024-02',
+    endDate: '2026-01',
+    website: 'https://midus.wisc.edu/',
+    bullets: [
+      'Built and maintained the MIDUS research website (midus.wisc.edu) on WordPress, delivering a modern accessible UI and shipping custom PHP + SQL modules to streamline publications and data access.',
+      'Modernized backend/research infrastructure for 200+ researchers, improving performance by 35% via REST API redesign, PostgreSQL optimization, and Redis caching.',
+      'Automated recurring updates and data operations with Python tooling, including a BeautifulSoup-based scraper to keep the national holiday calendar current, eliminating manual entry and reducing system/query load.',
+      'Implemented production guardrails (validation + auth/security controls like OAuth2/RBAC/JWT, rate limiting, audit-friendly workflows) to keep data pipelines reliable and maintainable.'
+    ]
+  },
+  {
     id: 'venture-build-lab',
     company: 'Venture Build Technology Exploration Lab, Wisconsin School of Business',
     role: 'Founder',
@@ -40,21 +55,6 @@ export const experiences: Experience[] = [
       'Engineered full-stack architecture using React, AWS Lambda, API Gateway, Terraform IaC, PostgreSQL, and LangChain-based RAG pipelines with custom embedding models.',
       'Implemented CI/CD workflows, containerized microservices, Redis caching layers, and observability infrastructure including metrics dashboards, automated alerting, and canary deployments.',
       'Ran 30+ structured customer discovery sessions with engineering and product leaders at Fortune 500 companies to validate technical feasibility and product-market fit.'
-    ]
-  },
-  {
-    id: 'uw-madison',
-    company: 'Institute on Aging (UW–Madison)',
-    role: 'Student IT Support Specialist',
-    period: 'February 2024 – Present',
-    startDate: '2024-02',
-    endDate: 'present',
-    website: 'https://midus.wisc.edu/',
-    bullets: [
-      'Built and maintained the MIDUS research website (midus.wisc.edu) on WordPress, delivering a modern accessible UI and shipping custom PHP + SQL modules to streamline publications and data access.',
-      'Modernized backend/research infrastructure for 200+ researchers, improving performance by 35% via REST API redesign, PostgreSQL optimization, and Redis caching.',
-      'Automated recurring updates and data operations with Python tooling, including a BeautifulSoup-based scraper to keep the national holiday calendar current, eliminating manual entry and reducing system/query load.',
-      'Implemented production guardrails (validation + auth/security controls like OAuth2/RBAC/JWT, rate limiting, audit-friendly workflows) to keep data pipelines reliable and maintainable.'
     ]
   },
   {
