@@ -11,9 +11,14 @@ export function AboutPage() {
       <div className="min-h-screen pt-24 pb-20">
         <div className="container">
           {/* Header */}
-          <div className="max-w-4xl mx-auto mb-16 text-center">
+          <motion.div
+            className="max-w-4xl mx-auto mb-16 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1
-              className="font-medium mb-5"
+              className="font-bold mb-5"
               style={{
                 fontSize: 'var(--text-display)',
                 lineHeight: 'var(--text-display-lh)',
@@ -28,12 +33,12 @@ export function AboutPage() {
                 fontSize: 'var(--text-body)',
                 lineHeight: 'var(--text-body-lh)',
                 color: 'var(--ink-secondary)',
-                textAlign: 'justify'
+                textAlign: 'center'
               }}
             >
               {bio}
             </p>
-          </div>
+          </motion.div>
 
           {/* Skills Section */}
           <div className="max-w-5xl mx-auto">

@@ -158,7 +158,7 @@ function ResearchCard({ paper, index }: { paper: ResearchPaper; index: number })
           </ul>
         </div>
 
-        <div className="mt-auto">
+        <div className="mt-auto pt-8">
           <div className="flex flex-wrap gap-2 mb-5">
             {paper.keywords.slice(0, 5).map((keyword) => (
               <span
