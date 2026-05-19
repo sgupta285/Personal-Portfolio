@@ -9,6 +9,7 @@ export interface Project {
   outcome: string;
   highlights: string[];
   links: {
+    github?: string;
     tableau?: string;
     report?: string;
   };
@@ -29,7 +30,7 @@ export const projects: Project[] = [
       'p95 latency improved 93% (4.3s → 300ms) using caching + streaming',
       'Kubernetes autoscaling (HPA) + observability for stable production operation'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/ClearClause' }
   },
   {
     id: 'buckyconnect',
@@ -45,7 +46,7 @@ export const projects: Project[] = [
       '280+ concurrent users, 1,000+ events/sec, <500ms latency',
       'Frontend bundle reduced 40%; improved time-to-interactive'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/BuckyConnect' }
   },
   {
     id: 'ai-trend-radar',
@@ -62,7 +63,7 @@ export const projects: Project[] = [
       'Semantic clustering to reduce noise and group similar mentions into a single trend story',
       'Evidence-backed summaries with drill-down into representative posts for human verification'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/AITrendRadar' }
   },
   {
     id: 'fraud-detection',
@@ -78,7 +79,7 @@ export const projects: Project[] = [
       '500+ QPS with ~80–100ms p95 latency',
       'Autoscaling + circuit breakers + tracing/monitoring for reliability'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Fraud-Detection-Api' }
   },
   {
     id: 'ecommerce-backend',
@@ -94,7 +95,7 @@ export const projects: Project[] = [
       'Load tested at 1,000+ concurrent users',
       '35% latency reduction, 60% DB load reduction'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/E-Commerce%20Backend%20System' }
   },
   {
     id: 'algorithmic-trading',
@@ -110,7 +111,7 @@ export const projects: Project[] = [
       '3× speedup using OpenMP + SIMD for large simulation sweeps',
       'Strong performance reporting with Sharpe-based evaluation'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Algorithmic%20Trading%20Strategy' }
   },
   {
     id: 'options-pricing',
@@ -126,7 +127,7 @@ export const projects: Project[] = [
       'Calibration with Newton–Raphson for volatility surfaces',
       '<2s runtime, high accuracy benchmarks, major performance optimization'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Options%20Pricing%20and%20Greeks%20Engine' }
   },
   {
     id: 'pairs-trading',
@@ -142,7 +143,7 @@ export const projects: Project[] = [
       '50K+ ticks/sec throughput, <100ms signal-to-order latency',
       'Robust monitoring for pipeline degradation'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Statistical%20Arbitrage%20Pairs%20Trading%20Cointegration%20%2B%20Kalman%20Filters.' }
   },
   {
     id: 'healthcare-spending',
@@ -158,7 +159,7 @@ export const projects: Project[] = [
       'Multivariate OLS with region fixed-effects showing significant correlations',
       'Interactive Tableau dashboards with regional drill-downs for policy insights'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Healthcare%20Spending%20vs%20Life%20Expectancy' }
   },
   {
     id: 'customer-churn',
@@ -174,7 +175,7 @@ export const projects: Project[] = [
       'Explainability via SHAP + hazard modeling (Cox) for timing',
       'Faster operational loop: 14 days → 2 days'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/customer-churn-prediction-intervention' }
   },
   {
     id: 'retail-forecasting',
@@ -190,7 +191,7 @@ export const projects: Project[] = [
       '8.2% MAPE, ~40% better than baseline',
       'Forecast + uncertainty band dashboards for operations planning'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Retail%20Demand%20Forecasting%20System%20' }
   },
   {
     id: 'demand-elasticity',
@@ -206,7 +207,7 @@ export const projects: Project[] = [
       'Structural break detection (Chow tests)',
       'Counterfactual simulation via impulse response functions'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Retail%20Demand%20Elasticity%20Analysis' }
   },
   {
     id: 'ab-testing',
@@ -222,7 +223,7 @@ export const projects: Project[] = [
       'Lift: 2.2% overall; 3.5% mobile segment',
       'Automated reporting pipeline (major reduction in manual analysis)'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/ecommerce-conversion-optimization' }
   },
   {
     id: 'product-metrics',
@@ -238,7 +239,7 @@ export const projects: Project[] = [
       '3 days → 10 minutes time-to-insight improvement',
       'Funnel + onboarding diagnostics → roadmap actions → +15% engagement'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Product%20Metrics%20%26%20Analytics%20Framework' }
   },
   {
     id: 'rct-evaluation',
@@ -254,7 +255,7 @@ export const projects: Project[] = [
       'LATE via 2SLS, clustered SE for robust inference',
       'Heterogeneity via causal forests (mobile vs desktop differences)'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Randomized%20Controlled%20Trial%20Evaluation' }
   },
   {
     id: 'minimum-wage',
@@ -270,7 +271,7 @@ export const projects: Project[] = [
       'Heterogeneity reporting (food service effect)',
       'Clear, publishable policy brief (15 pages)'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/Minimum%20Wage%20Employment%20Effects' }
   },
   {
     id: 'badgerhub',
@@ -319,7 +320,7 @@ export const projects: Project[] = [
       'RESTful API with Firebase for real-time updates and messaging',
       'Caching mechanisms and offline mode for reduced network dependency'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/ConnecTech' }
   },
   {
     id: 'spotify-popularity',
@@ -335,7 +336,7 @@ export const projects: Project[] = [
       'Optimized data pipelines reduced preprocessing time by 30%',
       'Automated hyperparameter tuning with Optuna'
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/SpotifySongPopularity' }
   },
   {
     id: 'specme-ai-product-copilot',
@@ -367,7 +368,7 @@ export const projects: Project[] = [
       "Reduced inference latency 93% from 4.3s to 300ms p95 through model optimization, request batching, response caching, and parallel prediction pipelines",
       "Built comprehensive monitoring tracking model performance metrics (precision, recall, latency distribution), infrastructure metrics (CPU, memory, GPU utilization), and business metrics (conversion rates, user engagement)"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/production-ml-serving-infrastructure' }
   },
   {
     id: 'llm-eval-inference-stack',
@@ -383,7 +384,7 @@ export const projects: Project[] = [
       "Reduced inference costs 40% through vLLM serving optimization, request batching, and intelligent routing between model sizes based on query complexity",
       "Built async inference pipelines processing 10K+ requests/hour with proper error handling, retry logic, and rate limiting"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/llm_eval_inference_stack' }
   },
   {
     id: 'recommendation-system-infrastructure',
@@ -399,7 +400,7 @@ export const projects: Project[] = [
       "Improved engagement metrics 18% through A/B testing framework comparing recommendation algorithms, ranking strategies, and personalization approaches",
       "Built feature store with online and offline components ensuring training-serving consistency, reducing feature computation latency 60% through pre-computation and caching"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/recommendation-system-infrastructure' }
   },
   {
     id: 'browser-agent-runtime',
@@ -415,7 +416,7 @@ export const projects: Project[] = [
       "Implemented permission checks, payload filtering, and fallback behavior so agents could interact with complex websites safely and consistently",
       "Built context management system tracking page state, action history, and intermediate results enabling multi-turn interactions and error recovery"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/browser-agent-runtime' }
   },
   {
     id: 'layout-aware-document-intelligence-platform',
@@ -431,7 +432,7 @@ export const projects: Project[] = [
       "Took the system from prototype to production with Docker and Kubernetes, enabling enterprise-style workloads across cloud and on-prem environments",
       "Built evaluation framework comparing extraction quality across document types, tracking precision/recall for different entity types and table structures"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/layout-aware-document-intelligence-platform' }
   },
   {
     id: 'multimodal-agent-evaluation-stack',
@@ -447,7 +448,7 @@ export const projects: Project[] = [
       "Designed data representations for browser state, user intent, and action traces to improve observability and post-deployment debugging",
       "Created benchmark suite with diverse task types, difficulty levels, and success criteria enabling comprehensive agent evaluation"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/multimodal-agent-evaluation-stack' }
   },
   {
     id: 'clinical-prompt-evaluation-suite',
@@ -463,7 +464,7 @@ export const projects: Project[] = [
       "Documented reusable prompt templates, scoring rubrics, and testing procedures to support repeatable evaluation and safer operational rollouts",
       "Built automated evaluation pipeline comparing prompt variants across accuracy, safety, consistency, and compliance dimensions"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/clinical-prompt-evaluation-suite' }
   },
   {
     id: 'human-data-collection-platform',
@@ -479,7 +480,7 @@ export const projects: Project[] = [
       "Added collection pipelines, quality checks, and review controls that balanced rapid iteration with maintainability as requirements evolved",
       "Built admin dashboard for task assignment, quality monitoring, and worker performance tracking"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/human-data-collection-platform' }
   },
   {
     id: 'reward-modeling-and-preference-data-lab',
@@ -495,7 +496,7 @@ export const projects: Project[] = [
       "Built data versioning system tracking collection methodology, annotator guidelines, and quality metrics for reproducible experiments",
       "Created analysis tools identifying patterns in preference data, inter-annotator agreement, and potential biases"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/reward-modeling-and-preference-data-lab' }
   },
   {
     id: 'ml-data-preparation-pipeline',
@@ -511,7 +512,7 @@ export const projects: Project[] = [
       "Built transformation pipelines handling missing values, outlier treatment, encoding, and scaling with proper train-test separation",
       "Created data quality dashboards monitoring completeness, distribution shifts, and feature correlations"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/ml-data-preparation-pipeline' }
   },
   {
     id: 'usage-analytics-dashboard',
@@ -527,7 +528,7 @@ export const projects: Project[] = [
       "Reduced time-to-insight 95% from 3 days to 2 hours through pre-computed aggregations, materialized views, and intelligent caching",
       "Built flexible API supporting various aggregation levels (hourly, daily, monthly), filtering, and export formats (CSV, PDF, API)"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/usage-analytics-dashboard' }
   },
   {
     id: 'real-time-service-platform',
@@ -543,7 +544,7 @@ export const projects: Project[] = [
       "Achieved 99.5% uptime through health checks, graceful degradation, circuit breakers, and automated recovery from transient failures",
       "Built comprehensive monitoring with Prometheus/Grafana tracking request rates, error rates, latency distribution, and resource utilization"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/real-time-service-platform' }
   },
   {
     id: 'production-service-api-platform',
@@ -559,7 +560,7 @@ export const projects: Project[] = [
       "Reduced API response time 65% through query optimization, caching strategies, and efficient data serialization",
       "Built comprehensive API documentation with OpenAPI specs, usage examples, and integration guides"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/production-service-api-platform' }
   },
   {
     id: 'interactive-agent-orchestration-platform',
@@ -575,7 +576,7 @@ export const projects: Project[] = [
       "Established CI/CD, tracing, and infrastructure-as-code workflows that improved deployment consistency, maintainability, and recovery time",
       "Built comprehensive access control system with role-based permissions, audit logging, and compliance reporting"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/interactive-agent-orchestration-platform' }
   },
   {
     id: 'mobile-health-tracker-react-native',
@@ -591,7 +592,7 @@ export const projects: Project[] = [
       "Implemented offline-first architecture with local data persistence, background sync, and conflict resolution for reliable experience without constant connectivity",
       "Integrated with device health APIs (HealthKit, Google Fit) for automatic activity tracking and data synchronization"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/mobile-health-tracker-react-native' }
   },
   {
     id: 'restaurant-discovery-platform',
@@ -607,7 +608,7 @@ export const projects: Project[] = [
       "Built review system with moderation, rating aggregation, and helpful vote tracking",
       "Integrated with reservation APIs enabling direct booking from platform"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/restaurant-discovery-platform' }
   },
   {
     id: 'event-management-system',
@@ -623,7 +624,7 @@ export const projects: Project[] = [
       "Built admin dashboard for event creation, attendee management, check-in tracking, and analytics",
       "Implemented waitlist management with automated notifications when spots become available"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/event-management-system' }
   },
   {
     id: 'habit-tracker-with-social-features',
@@ -639,7 +640,7 @@ export const projects: Project[] = [
       "Built notification system with smart timing based on user behavior patterns",
       "Implemented friend system with challenge creation, progress sharing, and competitive leaderboards"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/habit-tracker-social-features' }
   },
   {
     id: 'low-latency-matching-engine-and-market-data-feed',
@@ -655,7 +656,7 @@ export const projects: Project[] = [
       "Processed 100K+ orders/sec with deterministic latency distribution through efficient C++ implementation avoiding allocations in hot paths",
       "Built market data feed handler parsing binary protocols (FIX, ITCH) with zero-copy techniques reducing processing overhead"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/low-latency-matching-engine-market-data-feed' }
   },
   {
     id: 'backtest-engineering-framework',
@@ -671,7 +672,7 @@ export const projects: Project[] = [
       "Built framework preventing overfitting through proper train-test splits, walk-forward analysis, and multiple testing corrections",
       "Implemented execution simulators modeling market microstructure, order routing, and realistic fill prices"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/backtest-engineering-framework' }
   },
   {
     id: 'portfolio-rebalancing-and-risk-management',
@@ -687,7 +688,7 @@ export const projects: Project[] = [
       "Calculated portfolio-level risk metrics including VaR, CVaR, and correlation structure with daily updates",
       "Built optimization engine finding efficient frontier balancing return expectations against risk constraints"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/portfolio-rebalancing-risk-management' }
   },
   {
     id: 'accounting-operations-platform',
@@ -703,7 +704,7 @@ export const projects: Project[] = [
       "Reduced analysis time 65% from 8 hours to 2.5 hours through optimized transformations, incremental processing, and materialized views",
       "Built monitoring dashboard tracking pipeline health, data freshness, and quality metrics with automated alerting"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/accounting-operations-platform' }
   },
   {
     id: 'cloud-native-production-platform',
@@ -719,7 +720,7 @@ export const projects: Project[] = [
       "Built data modeling with proper schemas, normalization, and dimensional models supporting analytics queries",
       "Deployed on AWS using S3 for storage, EMR for Spark clusters, and Glue for metadata management"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/cloud-native-production-platform' }
   },
   {
     id: 'multi-source-data-integration',
@@ -751,7 +752,7 @@ export const projects: Project[] = [
       "Implemented marketing mix model with adstock effects quantifying long-term impact of brand advertising",
       "Created budget optimization recommending reallocation improving projected ROI 18%"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/marketing-attribution-response-modeling' }
   },
   {
     id: 'causal-inference-with-difference-in-differences',
@@ -767,7 +768,7 @@ export const projects: Project[] = [
       "Implemented synthetic control method when parallel trends assumption was violated",
       "Built event study analysis showing treatment effect evolution over time"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/causal-inference-difference-in-differences' }
   },
   {
     id: 'experimental-design-and-power-analysis-tool',
@@ -783,7 +784,7 @@ export const projects: Project[] = [
       "Built sample size recommendations balancing statistical power with cost constraints",
       "Implemented optimal allocation finding best treatment-control split maximizing power given budget"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/experimental-design-power-analysis-tool' }
   },
   {
     id: 'census-data-analytics-and-visualization',
@@ -799,7 +800,7 @@ export const projects: Project[] = [
       "Built interactive dashboards exploring demographic trends, income distribution, and housing patterns by geography",
       "Created choropleth maps visualizing metrics at county, state, and national levels"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/census-data-analytics-visualization' }
   },
   {
     id: 'high-performance-storage-infrastructure',
@@ -815,7 +816,7 @@ export const projects: Project[] = [
       "Reduced latency 93% from 4.3s to 300ms p95 through bottleneck elimination, parallel processing, and efficient resource management",
       "Handled 100K+ operations with linear scalability through partitioning, load balancing, and horizontal scaling"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/high-performance-storage-infrastructure' }
   },
   {
     id: 'real-time-data-processing-platform',
@@ -831,7 +832,7 @@ export const projects: Project[] = [
       "Built fault-tolerant architecture with exactly-once semantics preventing data loss and duplicate processing",
       "Achieved 99.8% uptime through automated recovery, health checks, and circuit breakers"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/real-time-data-processing-platform' }
   },
   {
     id: 'secure-data-processing-service',
@@ -847,7 +848,7 @@ export const projects: Project[] = [
       "Reduced security incidents 100% through secure coding practices, input validation, and defense-in-depth architecture",
       "Built audit system tracking all data access with timestamps, user identity, and operation details for compliance"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/secure-data-processing-service' }
   },
   {
     id: 'kubernetes-monitoring-and-autoscaling-stack',
@@ -879,7 +880,7 @@ export const projects: Project[] = [
       "Added deployment tooling and service-level observability that improved debugging speed, production reliability, and operational visibility",
       "Achieved 95% GPU utilization through intelligent batching and request scheduling"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/multimodal-ocr-vlm-serving-stack' }
   },
   {
     id: 'linux-latency-diagnostics-and-scheduler-profiler',
@@ -895,7 +896,7 @@ export const projects: Project[] = [
       "Surfaced race conditions, CPU hot spots, and tail-latency regressions through dashboards and targeted analysis workflows",
       "Built automated detection of performance regressions comparing latency distributions across releases"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/linux-latency-diagnostics-scheduler-profiler' }
   },
   {
     id: 'device-telemetry-sdk-and-recorder',
@@ -927,7 +928,7 @@ export const projects: Project[] = [
       "Optimized throughput and latency using efficient resource management and concurrency-aware design",
       "Achieved million+ samples/sec throughput with deterministic latency distribution"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/distributed-data-acquisition-system' }
   },
   {
     id: 'real-time-control-system',
@@ -943,7 +944,7 @@ export const projects: Project[] = [
       "Focused on efficient data structures, concurrency, and debugging for performance-sensitive runtime environments",
       "Met hard real-time constraints with <100us worst-case latency through careful design and testing"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/real-time-control-system' }
   },
   {
     id: 'geometry-processing-pipeline',
@@ -959,7 +960,7 @@ export const projects: Project[] = [
       "Maintained high throughput while preserving numerical precision and geometric robustness",
       "Reduced processing time 60% through algorithm optimization and parallel computation"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/geometry-processing-pipeline' }
   },
   {
     id: 'firmware-build-and-verification-tooling',
@@ -975,7 +976,7 @@ export const projects: Project[] = [
       "Simplified root-cause analysis through debug utilities, automated tests, and verification scripts for hardware-software integration workflows",
       "Reduced firmware build time 50% through incremental compilation and caching"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/firmware-build-and-verification-tooling' }
   },
   {
     id: 'infrastructure-automation-framework',
@@ -991,7 +992,7 @@ export const projects: Project[] = [
       "Eliminated configuration drift through declarative infrastructure and automated reconciliation",
       "Improved audit trail with all infrastructure changes tracked in Git with proper review process"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/infrastructure-automation-framework' }
   },
   {
     id: 'ads-integrity-content-moderation-platform',
@@ -1007,6 +1008,6 @@ export const projects: Project[] = [
       "Reviewer escalation path with traceable decisions and audit-friendly logging",
       "Low-latency screening flow designed for real-time ad review operations"
     ],
-    links: {}
+    links: { github: 'https://github.com/sgupta285/Personal-Projects/tree/main/ads_integrity_content_moderation_platform' }
   }
 ];

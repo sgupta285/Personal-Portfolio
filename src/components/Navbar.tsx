@@ -15,6 +15,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
+    { id: 'research', label: 'Research' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
     { id: 'resume', label: 'Resume' }
@@ -61,7 +62,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
               <motion.button
                 key={item.id}
                 onClick={() => handleNavigation(item.id)}
-                className="relative px-5 py-2.5 rounded-full transition-colors"
+                className="relative px-3 lg:px-5 py-2.5 rounded-full transition-colors"
                 style={{
                   color: currentPage === item.id ? 'white' : 'var(--ink-primary)',
                   fontWeight: currentPage === item.id ? '500' : '400'

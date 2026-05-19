@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ArrowRight, Download, Code2, Briefcase } from 'lucide-react';
+import { ArrowRight, BookOpen, Download, Code2, Briefcase } from 'lucide-react';
 import { motion, useScroll, useTransform, useInView } from 'motion/react';
 import { AnimatedPage } from '../components/AnimatedPage';
 import profilePic from 'figma:asset/0cf11c76192416317c97ea111baa7976101b16f9.png';
@@ -89,7 +89,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       fetchPriority="high"
                       className="w-full h-full object-cover"
                       style={{
-                        objectPosition: 'top center'
+                        objectPosition: 'center 52%'
                       }}
                     />
                     <motion.div
@@ -268,10 +268,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     delay={0.1}
                   />
                   <FeatureCard
+                    icon={<BookOpen size={24} />}
+                    title="Research"
+                    onClick={() => onNavigate('research')}
+                    delay={0.2}
+                  />
+                  <FeatureCard
                     icon={<ArrowRight size={24} />}
                     title="Connect"
                     onClick={() => onNavigate('contact')}
-                    delay={0.2}
+                    delay={0.3}
                   />
                 </div>
               </div>

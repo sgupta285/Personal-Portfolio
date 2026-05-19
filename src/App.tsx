@@ -5,11 +5,12 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ExperiencePage } from './pages/ExperiencePage';
+import { ResearchPage } from './pages/ResearchPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { ResumePage } from './pages/ResumePage';
 
-type Page = 'home' | 'projects' | 'experience' | 'about' | 'contact' | 'resume';
+type Page = 'home' | 'projects' | 'experience' | 'research' | 'about' | 'contact' | 'resume';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -22,6 +23,8 @@ export default function App() {
         return <ProjectsPage />;
       case 'experience':
         return <ExperiencePage />;
+      case 'research':
+        return <ResearchPage />;
       case 'about':
         return <AboutPage />;
       case 'contact':

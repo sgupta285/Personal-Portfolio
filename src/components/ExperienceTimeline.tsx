@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import type { Experience } from '../data/experience';
 
@@ -106,6 +107,22 @@ function ExperienceNode({
               >
                 {experience.company}
               </p>
+              {experience.website && (
+                <a
+                  href={experience.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1.5 transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--accent-glow)]"
+                  style={{
+                    fontSize: 'var(--text-small)',
+                    lineHeight: 'var(--text-small-lh)',
+                    color: 'var(--ink-secondary)'
+                  }}
+                >
+                  {experience.website.replace(/^https?:\/\//, '')}
+                  <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              )}
             </div>
             <div
               className="flex-shrink-0 px-3 py-1 rounded"

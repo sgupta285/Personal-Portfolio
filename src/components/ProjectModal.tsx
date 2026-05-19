@@ -209,7 +209,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </section>
 
           {/* Links */}
-          {(project.links.tableau || project.links.report) && (
+          {(project.links.github || project.links.tableau || project.links.report) && (
             <section>
               <h3
                 className="font-medium mb-3"
@@ -222,40 +222,56 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 Links
               </h3>
               <div className="flex flex-wrap gap-3">
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-[var(--accent)]/90"
+                    style={{
+                      backgroundColor: 'var(--accent)',
+                      color: 'white',
+                      borderRadius: 'var(--r-md)'
+                    }}
+                  >
+                    <Github size={18} />
+                    <span>GitHub Repo</span>
+                  </a>
+                )}
                 {project.links.tableau && (
-                <a
-                  href={project.links.tableau !== '(placeholder)' ? project.links.tableau : '#'}
-                  target={project.links.tableau !== '(placeholder)' ? '_blank' : undefined}
-                  rel={project.links.tableau !== '(placeholder)' ? 'noopener noreferrer' : undefined}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-[var(--accent)]/90"
-                  style={{
-                    backgroundColor: 'var(--accent)',
-                    color: 'white',
-                    borderRadius: 'var(--r-md)'
-                  }}
-                >
-                  <ExternalLink size={18} />
-                  <span>Tableau Dashboard</span>
-                </a>
-              )}
-              {project.links.report && (
-                <a
-                  href={project.links.report !== '(placeholder)' ? project.links.report : '#'}
-                  target={project.links.report !== '(placeholder)' ? '_blank' : undefined}
-                  rel={project.links.report !== '(placeholder)' ? 'noopener noreferrer' : undefined}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-[var(--accent)]/90"
-                  style={{
-                    backgroundColor: 'var(--accent)',
-                    color: 'white',
-                    borderRadius: 'var(--r-md)'
-                  }}
-                >
-                  <ExternalLink size={18} />
-                  <span>View Report</span>
-                </a>
-              )}
-            </div>
-          </section>
+                  <a
+                    href={project.links.tableau !== '(placeholder)' ? project.links.tableau : '#'}
+                    target={project.links.tableau !== '(placeholder)' ? '_blank' : undefined}
+                    rel={project.links.tableau !== '(placeholder)' ? 'noopener noreferrer' : undefined}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-[var(--accent)]/90"
+                    style={{
+                      backgroundColor: 'var(--accent)',
+                      color: 'white',
+                      borderRadius: 'var(--r-md)'
+                    }}
+                  >
+                    <ExternalLink size={18} />
+                    <span>Tableau Dashboard</span>
+                  </a>
+                )}
+                {project.links.report && (
+                  <a
+                    href={project.links.report !== '(placeholder)' ? project.links.report : '#'}
+                    target={project.links.report !== '(placeholder)' ? '_blank' : undefined}
+                    rel={project.links.report !== '(placeholder)' ? 'noopener noreferrer' : undefined}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-[var(--accent)]/90"
+                    style={{
+                      backgroundColor: 'var(--accent)',
+                      color: 'white',
+                      borderRadius: 'var(--r-md)'
+                    }}
+                  >
+                    <ExternalLink size={18} />
+                    <span>View Report</span>
+                  </a>
+                )}
+              </div>
+            </section>
           )}
         </div>
       </div>

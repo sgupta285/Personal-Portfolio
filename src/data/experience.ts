@@ -5,10 +5,43 @@ export interface Experience {
   period: string;
   startDate: string;
   endDate: string;
+  website?: string;
   bullets: string[];
 }
 
 export const experiences: Experience[] = [
+  {
+    id: 'specme',
+    company: 'SpecMe',
+    role: 'Co-Founder',
+    period: 'November 2025 - Present',
+    startDate: '2025-11',
+    endDate: 'present',
+    website: 'https://specme.ai',
+    bullets: [
+      'Building an AI-powered specification engine that ingests unstructured product input from Slack, GitHub, Jira, and meeting transcripts and outputs versioned, engineer-ready technical specs.',
+      'Architected the core system: NLP parsing for multi-source ingestion, diff generation with semantic versioning, and automated next-step recommendation logic.',
+      'Built production infrastructure including OAuth 2.0/SSO authentication flows, Stripe billing across four pricing tiers, GitHub API integration for PR-level spec delivery, and SSR/SSG migration for performance and SEO.',
+      'Designed an event-driven backend using Next.js serverless functions, PostgreSQL for persistent state, and webhook-based real-time sync across connected platforms.',
+      'Shipping MVP with early design partners across mid-market and enterprise product teams; actively onboarding pilot users.'
+    ]
+  },
+  {
+    id: 'venture-build-lab',
+    company: 'Venture Build Technology Exploration Lab, Wisconsin School of Business',
+    role: 'Founder',
+    period: 'September 2025 - December 2025',
+    startDate: '2025-09',
+    endDate: '2025-12',
+    website: 'https://clearclause.net',
+    bullets: [
+      "Selected as 1 of 20 founders from 300+ applicants into UW-Madison's competitive venture creation program under Sandra Bradley at the Wisconsin School of Business.",
+      'Designed and built two production-grade AI systems from zero: an NLP-powered contract analysis platform and a real-time trend intelligence engine, both serving live users.',
+      'Engineered full-stack architecture using React, AWS Lambda, API Gateway, Terraform IaC, PostgreSQL, and LangChain-based RAG pipelines with custom embedding models.',
+      'Implemented CI/CD workflows, containerized microservices, Redis caching layers, and observability infrastructure including metrics dashboards, automated alerting, and canary deployments.',
+      'Ran 30+ structured customer discovery sessions with engineering and product leaders at Fortune 500 companies to validate technical feasibility and product-market fit.'
+    ]
+  },
   {
     id: 'uw-madison',
     company: 'Institute on Aging (UW–Madison)',
@@ -16,6 +49,7 @@ export const experiences: Experience[] = [
     period: 'February 2024 – Present',
     startDate: '2024-02',
     endDate: 'present',
+    website: 'https://midus.wisc.edu/',
     bullets: [
       'Built and maintained the MIDUS research website (midus.wisc.edu) on WordPress, delivering a modern accessible UI and shipping custom PHP + SQL modules to streamline publications and data access.',
       'Modernized backend/research infrastructure for 200+ researchers, improving performance by 35% via REST API redesign, PostgreSQL optimization, and Redis caching.',
