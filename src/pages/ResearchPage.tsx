@@ -158,8 +158,18 @@ function ResearchCard({ paper, index }: { paper: ResearchPaper; index: number })
           </ul>
         </div>
 
-        <div className="mt-auto pt-12">
-          <div className="flex flex-wrap gap-2 mb-10">
+        <div
+          className="mt-auto"
+          style={{
+            paddingTop: '72px'
+          }}
+        >
+          <div
+            className="flex flex-wrap gap-2"
+            style={{
+              marginBottom: '64px'
+            }}
+          >
             {paper.keywords.slice(0, 5).map((keyword) => (
               <span
                 key={keyword}
@@ -178,10 +188,12 @@ function ResearchCard({ paper, index }: { paper: ResearchPaper; index: number })
           </div>
 
           <div
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-wrap items-center gap-4"
             style={{
               fontSize: 'var(--text-small)',
-              lineHeight: 'var(--text-small-lh)'
+              lineHeight: 'var(--text-small-lh)',
+              paddingTop: '28px',
+              borderTop: '1px solid var(--muted)'
             }}
           >
             {paper.github && (
