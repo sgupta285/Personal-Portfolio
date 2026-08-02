@@ -4,8 +4,7 @@ import { AnimatedPage } from '../components/AnimatedPage';
 
 export function ResumePage() {
   const handleDownload = () => {
-    // Open Google Drive link in new tab
-    window.open('https://drive.google.com/file/d/115kCtAogHBBvzMCeM9AJweOjp7ctP1nx/view', '_blank');
+    window.open('/Srijan_Gupta_Resume.pdf', '_blank');
   };
   
   const resume = {
