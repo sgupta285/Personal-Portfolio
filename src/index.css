@@ -1874,3 +1874,26 @@ body {
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
 }
+
+.hero-credential-line {
+  font-size: var(--text-h2);
+  line-height: var(--text-h2-lh);
+}
+
+@media (max-width: 374px) {
+  .hero-credential-line {
+    font-size: 12.1px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .hero-credential-line {
+    font-size: 14.4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .hero-credential-line {
+    font-size: 23.6px;
+  }
+}
