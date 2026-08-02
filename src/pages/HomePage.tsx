@@ -145,13 +145,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     <h2
                       className="whitespace-nowrap"
                       style={{
-                        fontSize: '15px',
-                        lineHeight: '1.4',
+                        fontSize: 'var(--text-h2)',
+                        lineHeight: 'var(--text-h2-lh)',
                         color: 'var(--ink-primary)',
                         fontWeight: '500'
                       }}
                     >
-                      BS CS/DS/Econ @ UW | MS in CS @NYU
+                      BS @ UW | MS in CS @NYU
                     </h2>
                   </motion.div>
 
