@@ -1,0 +1,48 @@
+{
+  "rewrites": [
+    {
+      "source": "/projects",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/experience",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/research",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/resume",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}

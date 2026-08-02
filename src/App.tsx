@@ -9,38 +9,43 @@ import { ResearchPage } from './pages/ResearchPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { ResumePage } from './pages/ResumePage';
-
-type Page = 'home' | 'projects' | 'experience' | 'research' | 'about' | 'contact' | 'resume';
+import { applyPageSeo, pagePaths, type Page } from './seo';
 
 const pages: Page[] = ['home', 'projects', 'experience', 'research', 'about', 'contact', 'resume'];
 
-function getPageFromHash(): Page {
-  const page = window.location.hash.replace('#', '') as Page;
-  return pages.includes(page) ? page : 'home';
+function getPageFromLocation(): Page {
+  const hashPage = window.location.hash.replace('#', '') as Page;
+  if (pages.includes(hashPage)) return hashPage;
+
+  const pathPage = Object.entries(pagePaths).find(([, path]) => path === window.location.pathname)?.[0] as Page | undefined;
+  return pathPage && pages.includes(pathPage) ? pathPage : 'home';
 }
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>(getPageFromHash);
+  const [currentPage, setCurrentPage] = useState<Page>(getPageFromLocation);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentPage(getPageFromHash());
+    const handleLocationChange = () => {
+      setCurrentPage(getPageFromLocation());
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    window.addEventListener('popstate', handleHashChange);
+    window.addEventListener('hashchange', handleLocationChange);
+    window.addEventListener('popstate', handleLocationChange);
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-      window.removeEventListener('popstate', handleHashChange);
+      window.removeEventListener('hashchange', handleLocationChange);
+      window.removeEventListener('popstate', handleLocationChange);
     };
   }, []);
+
+  useEffect(() => {
+    applyPageSeo(currentPage);
+  }, [currentPage]);
 
   const handleNavigate = (page: string) => {
     const nextPage = pages.includes(page as Page) ? (page as Page) : 'home';
     setCurrentPage(nextPage);
 
-    const nextHash = nextPage === 'home' ? '' : `#${nextPage}`;
-    const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
+    const nextUrl = pagePaths[nextPage];
     window.history.pushState(null, '', nextUrl);
   };
 

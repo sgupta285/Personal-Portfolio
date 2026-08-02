@@ -143,14 +143,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     className="mb-8 text-center md:text-left"
                   >
                     <h2
+                      className="whitespace-nowrap"
                       style={{
-                        fontSize: 'var(--text-h2)',
-                        lineHeight: 'var(--text-h2-lh)',
+                        fontSize: '15px',
+                        lineHeight: '1.4',
                         color: 'var(--ink-primary)',
                         fontWeight: '500'
                       }}
                     >
-                      CS/DS/Econ @ UW-Madison | Incoming Master's Student @ NYU
+                      BS CS/DS/Econ @ UW | MS in CS @NYU
                     </h2>
                   </motion.div>
 

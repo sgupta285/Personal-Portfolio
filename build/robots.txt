@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personal-website-srijan.vercel.app/sitemap.xml

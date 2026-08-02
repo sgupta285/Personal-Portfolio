@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { pagePaths, type Page } from '../seo';
 
 interface NavbarProps {
   currentPage: string;
@@ -11,7 +12,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = [
+  const navItems: Array<{ id: Page; label: string }> = [
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
@@ -29,7 +30,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavigation = (page: string) => {
+  const handleNavigation = (page: Page) => {
     onNavigate(page);
     setIsMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,9 +60,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             }}
           >
             {navItems.map((item, index) => (
-              <motion.button
+              <motion.a
                 key={item.id}
-                onClick={() => handleNavigation(item.id)}
+                href={pagePaths[item.id]}
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleNavigation(item.id);
+                }}
                 className="relative px-3 lg:px-5 py-2.5 rounded-full transition-colors"
                 style={{
                   color: currentPage === item.id ? 'white' : 'var(--ink-primary)',
@@ -85,7 +90,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
                   />
                 )}
                 <span className="relative z-10">{item.label}</span>
-              </motion.button>
+              </motion.a>
             ))}
           </motion.div>
 
@@ -120,9 +125,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             >
               <div className="py-4 space-y-1 px-4">
                 {navItems.map((item, index) => (
-                  <motion.button
+                  <motion.a
                     key={item.id}
-                    onClick={() => handleNavigation(item.id)}
+                    href={pagePaths[item.id]}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      handleNavigation(item.id);
+                    }}
                     className="block w-full text-left px-4 py-3 rounded-lg transition-all"
                     style={{
                       color: currentPage === item.id ? 'white' : 'var(--ink-primary)',
@@ -135,7 +144,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
                     whileTap={{ scale: 0.98 }}
                   >
                     {item.label}
-                  </motion.button>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>

@@ -103,7 +103,7 @@ export function AboutPage() {
                       color: 'var(--ink-secondary)'
                     }}
                   >
-                    Master's Program, September 2026 - December 2027
+                    M.S. in Computer Science, September 2026 - December 2027
                   </p>
                 </div>
                 <div>
