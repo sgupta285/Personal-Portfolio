@@ -150,7 +150,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                         fontWeight: '500'
                       }}
                     >
-                      CS/DS/Econ @ UW–Madison
+                      CS/DS/Econ @ UW-Madison | Incoming Master's Student @ NYU
                     </h2>
                   </motion.div>
 

@@ -94,6 +94,27 @@ export function AboutPage() {
                       color: 'var(--ink-primary)'
                     }}
                   >
+                    New York University
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 'var(--text-body)',
+                      lineHeight: 'var(--text-body-lh)',
+                      color: 'var(--ink-secondary)'
+                    }}
+                  >
+                    Master's Program, September 2026 - December 2027
+                  </p>
+                </div>
+                <div>
+                  <p
+                    className="font-medium"
+                    style={{
+                      fontSize: 'var(--text-body)',
+                      lineHeight: 'var(--text-body-lh)',
+                      color: 'var(--ink-primary)'
+                    }}
+                  >
                     University of Wisconsin–Madison
                   </p>
                   <p
